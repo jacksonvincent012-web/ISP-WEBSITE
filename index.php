@@ -1,4 +1,5 @@
 <?php
+require_once 'config/db.php';
 require_once 'config/functions.php'; secureSessionStart(); sendSecurityHeaders();
 if (isset($_SESSION['user_id'])) {
     header('Location: dashboard.php');

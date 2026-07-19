@@ -1,4 +1,4 @@
-<?php require_once 'config/functions.php'; secureSessionStart(); sendSecurityHeaders(); require_once 'config/db.php'; requireLogin(); $userId = $_SESSION['user_id']; $user = $pdo->prepare("SELECT * FROM users WHERE id = ?"); $user->execute([$userId]); $user = $user->fetch(); ?>
+<?php require_once 'config/db.php'; require_once 'config/functions.php'; secureSessionStart(); sendSecurityHeaders(); requireLogin(); $userId = $_SESSION['user_id']; $user = $pdo->prepare("SELECT * FROM users WHERE id = ?"); $user->execute([$userId]); $user = $user->fetch(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

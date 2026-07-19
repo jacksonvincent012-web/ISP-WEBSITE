@@ -1,6 +1,5 @@
-<?php require_once 'config/functions.php'; secureSessionStart(); sendSecurityHeaders();
+<?php require_once 'config/db.php'; require_once 'config/functions.php'; secureSessionStart(); sendSecurityHeaders();
 if (isset($_SESSION['user_id'])) { header('Location: dashboard.php'); exit; }
-require_once 'config/db.php';
 $selectedPlan = isset($_GET['plan']) ? (int)$_GET['plan'] : 0;
 $plans = $pdo->query("SELECT * FROM plans ORDER BY price ASC")->fetchAll();
 ?>
