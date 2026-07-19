@@ -28,7 +28,7 @@ if ($autoUser) {
 *{margin:0;padding:0;box-sizing:border-box;}
 body{
     font-family:'Inter',sans-serif;min-height:100vh;
-    background:#080d1a;display:flex;align-items:center;justify-content:center;
+    background:#080d1a;display:flex;align-items:flex-start;justify-content:center;
     position:relative;overflow-x:hidden;padding:30px 16px;
 }
 body::before{
@@ -101,8 +101,8 @@ body::after{
 /* ─── Admin Login (collapsible) ─── */
 .admin-toggle{
     display:flex;align-items:center;justify-content:center;gap:6px;
-    color:rgba(255,255,255,0.2);font-size:11px;cursor:pointer;
-    padding:8px;border-radius:8px;transition:all 0.2s;user-select:none;border:none;background:none;width:100%;font-family:inherit;
+    color:rgba(255,255,255,0.45);font-size:12px;cursor:pointer;
+    padding:10px;border-radius:8px;transition:all 0.2s;user-select:none;border:none;background:none;width:100%;font-family:inherit;
 }
 .admin-toggle:hover{color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.03);}
 .admin-toggle i{font-size:10px;transition:transform 0.3s;}
