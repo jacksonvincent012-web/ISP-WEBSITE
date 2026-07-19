@@ -7,9 +7,16 @@ A complete ISP customer management system with time-based KES billing, M-Pesa in
 ### User Portal
 - Registration with password strength meter & honeypot protection
 - Login with CSRF + rate limiting + IP tracking
+- - <img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/071e47e2-b7ff-4b59-a9ff-8c80e84a6cff" />
+
 - Dashboard: active plan, data usage bar, invoices, payments, support tickets
 - Profile management & password change
 - Network status page, FAQ page
+- <img width="1920" height="1032" alt="Screenshot 2026-07-19 183948" src="https://github.com/user-attachments/assets/e9442f28-d9ef-42b5-8d36-f500c525f485" />
+║
+║
+
+▼<img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/ac1b6a82-07c1-4875-ad88-174e0ac44b5b" />
 
 ### Admin Panel
 - User management (suspend/activate/delete)
