@@ -96,11 +96,11 @@ input::placeholder, textarea::placeholder { color:rgba(255,255,255,0.25); }
 .pp-card.selected .pp-name{color:#60a5fa;}
 .pp-card.selected .pp-price{color:#fff;}
 .pp-card:hover{border-color:rgba(59,130,246,0.3);background:rgba(255,255,255,0.06);}
-.pp-card.premium{border-color:rgba(59,130,246,0.4);background:linear-gradient(135deg,rgba(59,130,246,0.12),rgba(99,102,241,0.12));}
-.pp-card.premium .pp-name{color:#60a5fa;}
+.pp-card.premium{border-color:#3b82f6;background:linear-gradient(135deg,#1d4ed8,#3b82f6);box-shadow:0 4px 16px rgba(59,130,246,0.3);}
+.pp-card.premium .pp-name{color:#bfdbfe;}
 .pp-card.premium .pp-price{color:#fff;}
-.pp-card.premium .pp-dur{color:rgba(96,165,250,0.5);}
-.pp-card.premium.selected{box-shadow:0 0 20px rgba(59,130,246,0.25);}
+.pp-card.premium .pp-dur{color:#dbeafe;}
+.pp-card.premium.selected{box-shadow:0 0 24px rgba(59,130,246,0.5);border-color:#60a5fa;}
 .pp-name{color:rgba(255,255,255,0.5);font-size:10px;font-weight:500;margin-bottom:2px;text-transform:uppercase;letter-spacing:0.3px;}
 .pp-price{color:rgba(255,255,255,0.85);font-size:16px;font-weight:800;}
 .pp-dur{color:rgba(255,255,255,0.2);font-size:10px;margin-top:2px;}
