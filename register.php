@@ -96,6 +96,11 @@ input::placeholder, textarea::placeholder { color:rgba(255,255,255,0.25); }
 .pp-card.selected .pp-name{color:#60a5fa;}
 .pp-card.selected .pp-price{color:#fff;}
 .pp-card:hover{border-color:rgba(59,130,246,0.3);background:rgba(255,255,255,0.06);}
+.pp-card.premium{border-color:rgba(59,130,246,0.4);background:linear-gradient(135deg,rgba(59,130,246,0.12),rgba(99,102,241,0.12));}
+.pp-card.premium .pp-name{color:#60a5fa;}
+.pp-card.premium .pp-price{color:#fff;}
+.pp-card.premium .pp-dur{color:rgba(96,165,250,0.5);}
+.pp-card.premium.selected{box-shadow:0 0 20px rgba(59,130,246,0.25);}
 .pp-name{color:rgba(255,255,255,0.5);font-size:10px;font-weight:500;margin-bottom:2px;text-transform:uppercase;letter-spacing:0.3px;}
 .pp-price{color:rgba(255,255,255,0.85);font-size:16px;font-weight:800;}
 .pp-dur{color:rgba(255,255,255,0.2);font-size:10px;margin-top:2px;}
@@ -129,8 +134,9 @@ input::placeholder, textarea::placeholder { color:rgba(255,255,255,0.25); }
                     elseif ($dur >= 168) $label = round($dur/168).' wk';
                     elseif ($dur >= 24) $label = round($dur/24).' d';
                     else $label = $dur.' h';
+                    $premium = $plan['price'] >= 500 ? 'premium' : '';
                 ?>
-                <label class="pp-card <?= $sel ?>" data-id="<?= $plan['id'] ?>">
+                <label class="pp-card <?= $sel ?> <?= $premium ?>" data-id="<?= $plan['id'] ?>">
                     <input type="radio" name="plan_id" value="<?= $plan['id'] ?>" <?= $sel ? 'checked' : '' ?>>
                     <div class="pp-name"><?= safe($plan['name']) ?></div>
                     <div class="pp-price">KSh <?= number_format($plan['price'],0) ?></div>
