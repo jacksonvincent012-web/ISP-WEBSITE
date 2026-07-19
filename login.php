@@ -26,10 +26,11 @@ if ($autoUser) {
 <style>
 :root{--accent:#3b82f6;}
 *{margin:0;padding:0;box-sizing:border-box;}
+html,body{min-height:100%;}
 body{
     font-family:'Inter',sans-serif;min-height:100vh;
-    background:#080d1a;display:flex;align-items:flex-start;justify-content:center;
-    position:relative;overflow-x:hidden;padding:30px 16px;
+    background:#080d1a;
+    position:relative;overflow-x:hidden;overflow-y:auto;padding:20px 14px;
 }
 body::before{
     content:'';position:fixed;width:700px;height:700px;
@@ -56,7 +57,7 @@ body::after{
 .card{
     background:rgba(18,25,45,0.88);backdrop-filter:blur(40px);-webkit-backdrop-filter:blur(40px);
     border:1px solid rgba(255,255,255,0.07);
-    border-radius:28px;padding:36px 32px;max-width:440px;width:100%;
+    border-radius:28px;padding:28px 22px;max-width:440px;width:100%;margin:0 auto;
     position:relative;z-index:2;
     box-shadow:0 40px 80px rgba(0,0,0,0.6),inset 0 1px 0 rgba(255,255,255,0.06);
 }
@@ -87,7 +88,7 @@ body::after{
 /* ─── Connect Section ─── */
 .connect-box{
     background:rgba(16,185,129,0.05);border:1px solid rgba(16,185,129,0.1);
-    border-radius:16px;padding:18px;margin-bottom:16px;text-align:center;
+    border-radius:16px;padding:14px;margin-bottom:12px;text-align:center;
     transition:border-color 0.3s;
 }
 .connect-box:hover{border-color:rgba(16,185,129,0.2);}
@@ -167,7 +168,7 @@ input::placeholder{color:rgba(255,255,255,0.12);}
 .success{background:rgba(16,185,129,0.08);color:#6ee7b7;border:1px solid rgba(16,185,129,0.12);}
 .info{background:rgba(59,130,246,0.08);color:#93c5fd;border:1px solid rgba(59,130,246,0.12);}
 
-.divider{display:flex;align-items:center;gap:10px;margin:16px 0 14px;}
+.divider{display:flex;align-items:center;gap:10px;margin:12px 0 10px;}
 .divider::before,.divider::after{content:'';flex:1;height:1px;background:rgba(255,255,255,0.04);}
 
 /* ─── Troubleshooting ─── */
@@ -255,7 +256,7 @@ input::placeholder{color:rgba(255,255,255,0.12);}
 
     <!-- ═══ Admin Login ═══ -->
     <div class="divider"></div>
-    <button class="admin-toggle" onclick="this.classList.toggle('open');document.querySelector('.admin-form').classList.toggle('show')">
+    <button type="button" class="admin-toggle" id="adminToggleBtn">
         <i class="fas fa-chevron-down"></i> Staff / Administrator Access <i class="fas fa-shield-alt"></i>
     </button>
     <div class="admin-form">
@@ -321,5 +322,17 @@ input::placeholder{color:rgba(255,255,255,0.12);}
         <p>&copy; <?= date('Y') ?> NetConnect KE. All rights reserved.</p>
     </div>
 </div>
+<script>
+(function(){
+    var btn = document.getElementById('adminToggleBtn');
+    if (btn) {
+        btn.addEventListener('click', function(){
+            btn.classList.toggle('open');
+            var form = document.querySelector('.admin-form');
+            if (form) form.classList.toggle('show');
+        });
+    }
+})();
+</script>
 </body>
 </html>
